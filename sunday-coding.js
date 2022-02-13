@@ -46,10 +46,12 @@ for (let i = 0; i < container.children.length; i++) {
       lastMove = "X";
       newNode.textContent = "X";
       // add X to board
+      board[Math.floor(i / 3)][i % 3] = "X";
     } else {
       lastMove = "O";
       newNode.textContent = "O";
       // add O to board
+      board[Math.floor(i / 3)][i % 3] = "O";
     }
 
     // 2. Make sure you only add one X or O to the tile
@@ -81,7 +83,7 @@ let board = [
 ];
 
 let board = ["X", "O", "_", "X", "O", "_", "X", "_", "_"];
-
+board[8 / 3];
 // insert into the board
 
 const detectWin = () => {
